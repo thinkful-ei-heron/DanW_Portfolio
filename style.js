@@ -79,7 +79,7 @@ function projectInfoEventListener() {
 function closeProjectInfoEventListener() {
   let closeInfoButton = document.querySelector('.closeInfoButton');
   closeInfoButton.onclick = () => {
-    //console.log('closeInfoButton was clicked');
+    console.log('closeInfoButton was clicked');
     toggleInfo();
   };
   closeInfoButton.addEventListener('keyup', function(e) {
@@ -93,7 +93,7 @@ function toggleInfo() {
   projectContainerOverlay.classList.toggle('toggleInfo');
 }
 
-function toggleContact(width) {
+function showContact(width) {
   let buttons = document.querySelector('.contactButtons');
   let contact = document.querySelector('.contactInfo');
   //contact.style.display = 'inline';
