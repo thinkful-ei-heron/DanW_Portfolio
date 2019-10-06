@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <main role="main">
+    <main>
       <canvas class="canvas"></canvas>
       <nav class="nav" id="nav">
         <ul class="navList">
@@ -72,9 +72,9 @@
               </a>
             </li>
             <li>
-              <a href="#contactInfo" class="target">
+              <button class="openContact">
                 <i class="open fa fa-envelope" id="contact"></i>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -161,8 +161,8 @@
       <section class="project" id="projects">
         <div class="projectContainer container1" aria-live="polite">
           <div class="projectContainerOverlay">
+            <button class="closeInfoButton">&#x2716;</button>
             <div class="projectTextContainer">
-              <button class="closeInfoButton"><i>&#x2716;</i></button>
               <p>
                 The NFL Records Quiz app was developed as an exercise in producing a single page web app with
                 dynamically generated html for all event transitions.
@@ -192,16 +192,21 @@
           <img class="screenShot" src="images/NFLQuiz.jpg" alt="NFL quiz screen-shot" />
           <nav class="projectNav">
             <ul class="projectButtons">
-              <a href="https://github.com/thinkful-ei-heron/Dan_Kei_quizApp">
-                <li class="projectButton"><i class="fab fa-github"></i></li>
-              </a>
+              <li class="projectButton">
+                <a href="https://github.com/thinkful-ei-heron/Dan_Kei_quizApp"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+
               <li class="projectButton">
                 <button class="infoButton"><i class="fa fa-info"></i></button>
               </li>
 
-              <a href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/">
-                <li class="projectButton"><i class="fa fa-play play"></i></li>
-              </a>
+              <li class="projectButton">
+                <a href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/"
+                  ><i class="fa fa-play play"></i
+                ></a>
+              </li>
             </ul>
           </nav>
         </div>

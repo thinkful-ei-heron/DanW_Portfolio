@@ -21,6 +21,10 @@ body {
   font-size: 16px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 main {
   position: relative;
   height: 100%;
@@ -501,6 +505,11 @@ header {
   display: flex;
   justify-content: space-between;
   list-style: none;
+
+  & a:hover,
+  & a:visited {
+    color: $color2;
+  }
 }
 
 .projectButton {
@@ -1039,6 +1048,16 @@ header {
 
       & a {
         font-size: 2.1rem;
+      }
+
+      & button {
+        background: none;
+        border: none;
+
+        & i {
+          font-size: 2.1rem;
+          color: $color1;
+        }
       }
     }
   }

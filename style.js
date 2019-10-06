@@ -1,10 +1,9 @@
 'use strict';
 
 function init() {
-  //console.log('TCL: init -> screenWidth', screenWidth);
+  bindListeners();
 
   let targets = document.getElementsByClassName('target');
-  bindListeners();
   //console.dir(targets);
   for (let i = 0; i < targets.length; i++) {
     //console.log('removing href from target');
@@ -46,13 +45,11 @@ function closeNavEventListener() {
 
 function contactEventListener() {
   let screenWidth = window.innerWidth;
-  let contact = document.getElementById('contact');
-  contact.onclick = () => {
+  let openContact = document.querySelector('.openContact');
+  openContact.onclick = () => {
+    console.log('openContact clicked');
     showContact(screenWidth);
   };
-  contact.addEventListener('keyup', function(e) {
-    if (e.keyCode === 13) showContact(screenWidth);
-  });
 }
 
 function closeContactEventListener() {
@@ -69,26 +66,25 @@ function closeContactEventListener() {
 function projectInfoEventListener() {
   let infoButton = document.querySelector('.infoButton');
   infoButton.onclick = () => {
+    console.log('info button was clicked');
     toggleInfo();
   };
-  infoButton.addEventListener('keyup', function(e) {
-    if (e.keyCode === 13) toggleInfo();
-  });
+  //infoButton.addEventListener('keypress', function(e) {
+  //  if (e.keyCode === 13) {
+  //    console.log('enter key pressed on infoButton');
+  //    infoButton.click();
+  //  }
+  //});
 }
 
 function closeProjectInfoEventListener() {
   let closeInfoButton = document.querySelector('.closeInfoButton');
   closeInfoButton.onclick = () => {
-    console.log('closeInfoButton was clicked');
     toggleInfo();
   };
-  closeInfoButton.addEventListener('keyup', function(e) {
-    if (e.keyCode === 13) toggleInfo();
-  });
 }
 
 function toggleInfo() {
-  //console.log('info button was clicked');
   let projectContainerOverlay = document.querySelector('.projectContainerOverlay');
   projectContainerOverlay.classList.toggle('toggleInfo');
 }

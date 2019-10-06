@@ -15,6 +15,10 @@ body {
   font-size: 16px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 main {
   position: relative;
   height: 100%;
@@ -596,6 +600,11 @@ header .l3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   list-style: none;
+}
+
+.projectButtons a:hover,
+.projectButtons a:visited {
+  color: #ff5da8;
 }
 
 .projectButton {
@@ -1247,6 +1256,14 @@ header .l3 {
   }
   .contactNav .contactButtons a {
     font-size: 2.1rem;
+  }
+  .contactNav .contactButtons button {
+    background: none;
+    border: none;
+  }
+  .contactNav .contactButtons button i {
+    font-size: 2.1rem;
+    color: #00c4ff;
   }
   .hero {
     margin-top: 15px;
