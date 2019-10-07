@@ -69,12 +69,6 @@ function projectInfoEventListener() {
     console.log('info button was clicked');
     toggleInfo();
   };
-  //infoButton.addEventListener('keypress', function(e) {
-  //  if (e.keyCode === 13) {
-  //    console.log('enter key pressed on infoButton');
-  //    infoButton.click();
-  //  }
-  //});
 }
 
 function closeProjectInfoEventListener() {

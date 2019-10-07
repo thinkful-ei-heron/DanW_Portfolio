@@ -274,7 +274,7 @@ header {
       font-size: 1.75rem;
     }
 
-    a {
+    & a {
       color: $color1;
       &:visited {
         color: $color1;
@@ -288,8 +288,18 @@ header {
       }
     }
 
-    .open:hover,
-    .open:focus {
+    & button {
+      border: none;
+      background: none;
+
+      & i {
+        font-size: 1.75rem;
+        color: $color1;
+      }
+    }
+
+    & .open:hover,
+    & .open:focus {
       outline: none;
       color: $color3;
     }
@@ -391,27 +401,19 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 440px;
-  width: 67%;
+  height: 480px;
+  width: 77%;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
-  transform: scale(1.15);
-  transition: transform 1.75s ease-in-out;
-
-  &.rotate {
-    transform: scale(1);
-  }
 }
 
 .projectContainerOverlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 440px;
+  height: 480px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 25px;
   color: white;
   opacity: 0;
@@ -425,18 +427,20 @@ header {
   & p {
     margin: 15px 10px;
     font-size: 1rem;
+    line-height: 1.4rem;
   }
 
   & button {
     position: absolute;
     top: 0px;
-    right: 5px;
+    right: 10px;
     height: 30px;
     width: 30px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: white;
     background: none;
     border: none;
+    z-index: 100;
   }
 }
 
@@ -483,8 +487,8 @@ header {
 
 .screenShot {
   margin-bottom: 75px;
-  height: 200px;
-  width: 200px;
+  height: 240px;
+  width: 240px;
 
   & img {
     height: 100%;
@@ -494,7 +498,7 @@ header {
 
 .projectNav {
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -708,58 +712,6 @@ header {
     top: 75%;
     right: 0px;
   }
-}
-
-.favorites {
-  padding-bottom: 20px;
-  padding-top: 30px;
-  height: 350px;
-  width: 100%;
-  background-color: white;
-  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
-}
-
-.favesContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: auto;
-
-  & img {
-    margin-top: 20px;
-    width: 100%;
-    align-self: flex-end;
-  }
-}
-
-.favesTitle {
-  margin-top: 30px;
-  margin-left: 25px;
-  width: 100vw;
-  font-family: $lexend;
-  font-size: 1.8rem;
-  font-weight: 500;
-  letter-spacing: -2px;
-  color: black;
-}
-
-.favoritesList {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  align-self: flex-start;
-  margin-top: 15px;
-  margin-left: 17px;
-  width: 90%;
-  font-size: 0.8rem;
-  color: black;
-}
-
-.firstIcon {
-  font-size: 1.4rem;
-  padding-right: 0.2em;
 }
 
 .skillsTitle {
@@ -1048,16 +1000,6 @@ header {
 
       & a {
         font-size: 2.1rem;
-      }
-
-      & button {
-        background: none;
-        border: none;
-
-        & i {
-          font-size: 2.1rem;
-          color: $color1;
-        }
       }
     }
   }
