@@ -177,7 +177,6 @@ header .l3 {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 190px;
 }
 
 .navList li {
@@ -424,7 +423,7 @@ header .l3 {
   left: 0;
   height: 140px;
   width: 340px;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   line-height: 150px;
   background-color: white;
   -webkit-clip-path: polygon(0 20%, 0 90%, 100% 100%);
@@ -446,7 +445,7 @@ header .l3 {
   left: 40px;
   height: 200px;
   width: 400px;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   line-height: 150px;
   z-index: 0;
   font-family: "lexend mega", sans-serif;
@@ -494,7 +493,7 @@ header .l3 {
   position: absolute;
   top: 0;
   left: 0;
-  height: 480px;
+  height: 100%;
   width: 100%;
   padding-top: 25px;
   color: white;
@@ -516,15 +515,14 @@ header .l3 {
 
 .projectContainerOverlay button {
   position: absolute;
-  top: 0px;
-  right: 10px;
+  top: 0;
+  right: 8px;
   height: 30px;
   width: 30px;
   font-size: 1.6rem;
   color: white;
   background: none;
   border: none;
-  z-index: 100;
 }
 
 .container1 {
@@ -706,7 +704,7 @@ header .l3 {
 }
 
 .aboutText span {
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 3.5rem;
 }
 
@@ -1093,6 +1091,18 @@ header .l3 {
 .experience.exp4 img {
   height: initial;
   width: initial;
+}
+
+@media (min-width: 320px) {
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  .second {
+    font-size: 2.5rem;
+  }
+  .aboutText span {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 600px) {
