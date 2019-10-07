@@ -526,7 +526,7 @@ header .l3 {
 }
 
 .container1 {
-  background-image: linear-gradient(30deg, rgba(255, 93, 168, 0.2) 10%, rgba(0, 196, 255, 0.2));
+  background-image: linear-gradient(30deg, rgba(0, 196, 255, 0.2) 10%, rgba(255, 93, 168, 0.2));
 }
 
 .projectTitle {
@@ -585,7 +585,6 @@ header .l3 {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, 0.1);
   border: 0;
 }
 
@@ -609,7 +608,7 @@ header .l3 {
   width: 45px;
   text-align: center;
   line-height: 45px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #ff5da8;
 }
 
@@ -621,7 +620,7 @@ header .l3 {
 .projectButton button {
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #ff5da8;
 }
 

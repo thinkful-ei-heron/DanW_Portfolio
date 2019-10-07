@@ -443,7 +443,7 @@ header {
 }
 
 .container1 {
-  background-image: linear-gradient(30deg, rgba($color2, 0.2) 10%, rgba($color1, 0.2));
+  background-image: linear-gradient(30deg, rgba($color1, 0.2) 10%, rgba($color2, 0.2));
 }
 
 .projectTitle {
@@ -499,7 +499,6 @@ header {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, 0.1);
   border: 0;
 }
 
@@ -519,7 +518,7 @@ header {
   width: 45px;
   text-align: center;
   line-height: 45px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: $color2;
 
   & .play {
@@ -530,7 +529,7 @@ header {
   & button {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: $color2;
   }
 }
