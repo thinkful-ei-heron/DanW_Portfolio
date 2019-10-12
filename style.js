@@ -12,12 +12,22 @@ function init() {
 }
 
 function bindListeners() {
+  buttonBorderOnTabListener();
   burgerEventListener();
   closeNavEventListener();
   contactEventListener();
   closeContactEventListener();
   projectInfoEventListener();
   closeProjectInfoEventListener();
+  contactNavEventListener();
+}
+
+function buttonBorderOnTabListener() {
+  document.body.addEventListener('keyup', function(e) {
+    if (e.which === 9) {
+      /* tab */ document.body.classList.remove('no-focus-outline');
+    }
+  });
 }
 
 function burgerEventListener() {
@@ -52,6 +62,18 @@ function contactEventListener() {
   };
 }
 
+function contactNavEventListener() {
+  let screenWidth = window.innerWidth;
+  let openContact = document.querySelector('.openContactNav');
+  openContact.onclick = () => {
+    console.log('openContact clicked');
+    showContact(screenWidth);
+  };
+  openContact.addEventListener('keyup', e => {
+    if (e.keyCode === 13) showContact(screenWidth);
+  });
+}
+
 function closeContactEventListener() {
   let screenWidth = window.innerWidth;
   let close = document.querySelector('.close');
@@ -80,6 +102,18 @@ function closeProjectInfoEventListener() {
 
 function toggleInfo() {
   let projectContainerOverlay = document.querySelector('.projectContainerOverlay');
+  let closeInfoButton = document.querySelector('.closeInfoButton');
+  let cursor = window.getComputedStyle(closeInfoButton).getPropertyValue('cursor');
+  console.log('TCL: toggleInfo -> cursor', cursor);
+
+  if (cursor === 'auto') {
+    closeInfoButton.style.cursor = 'pointer';
+    closeInfoButton.tabIndex = 0;
+  } else {
+    closeInfoButton.style.cursor = 'auto';
+    closeInfoButton.tabIndex = -1;
+  }
+
   projectContainerOverlay.classList.toggle('toggleInfo');
 }
 

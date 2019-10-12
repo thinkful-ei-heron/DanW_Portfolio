@@ -13,15 +13,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0-1/css/all.css" />
   </head>
 
-  <body>
+  <body class="no-focus-outline">
     <main>
       <canvas class="canvas"></canvas>
       <nav class="nav" id="nav">
         <ul class="navList">
           <li><a href="#">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="">Misc</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><i class="openContactNav" tabindex="0">Contact</i></li>
         </ul>
         <i class="closeBurger"><a href="#" class="target">&#x2716;</a></i>
       </nav>
@@ -96,10 +96,15 @@
           <div class="aboutText">
             <span>Hi! I'm Dan.</span>
             <p>
-              I'm obsessed with web development, just ask my girlfriend 😝.
+              In my past life as a product support engineer at Teradata I developed a passion for working in a
+              team to solve high-impact real world problems.
             </p>
             <p>
-              I think intersectionObserver is the coolest, and I'm currently learning to implement web workers
+              Now I'm obsessed with web development (just ask my girlfriend 😝), and I want to bring that same
+              passion for working in a team to solve problems to this new domain.
+            </p>
+            <p>
+              I think IntersectionObserver is the coolest, and I'm currently learning to implement web workers
               into my JS animations.
             </p>
             <p>
@@ -111,47 +116,6 @@
           </div>
           <div class="aboutImg"></div>
         </section>
-        <h8 class="tripTitle">Trips & Adventures</h8>
-        <section class="trips">
-          <ul class="tripList">
-            <li><span class="year">2014 - </span>Circumvention of Gallatin Peak</li>
-            <li id="jacksonTxt"><span class="year">2015 - </span>Grand Teton National Park</li>
-            <li id="bozemanTxt"><span class="year">2016 - </span>Gallatin National Forest</li>
-            <li id="sequoiaTxt"><span class="year">2017 - </span>Sequoia National Forest</li>
-            <li><span class="year">2017 - </span>Yosemite National Park backpacking trip</li>
-            <li id="mtHoodTxt"><span class="year">2018 - </span>Circumvention of Mt. Hood</li>
-            <li id="mammothTxt"><span class="year">2019 - </span>June Lake/Ansel Adams Wilderness</li>
-          </ul>
-          <div class="slider" aria-live="polite">
-            <img id="bozeman" src="./images/Bozeman.jpg" alt="Hiking in Bozemant Montana" />
-            <img
-              id="jackson"
-              class="hideLeft"
-              src="./images/Jackson WY.jpg"
-              alt="Hiking in Jackson Wyoming"
-            />
-            <img
-              id="mtHood"
-              class="hideLeft"
-              src="./images/MtHood.jpg"
-              alt="Camping at Mt Hood National Forest"
-            />
-            <img
-              id="sequoia"
-              class="hideLeft"
-              src="./images/Sequoia.jpg"
-              alt="Hiking in Sequoia National Forest"
-            />
-            <img
-              id="mammoth"
-              class="hideLeft"
-              src="./images/Mammoth.jpg"
-              alt="Hiking in Ansel Adams Wilderness"
-            />
-            <i class="slideButton leftButton fas fa-chevron-left"></i>
-            <i class="slideButton rightButton fas fa-chevron-right"></i>
-          </div>
-        </section>
       </section>
 
       <div class="titleContainer">
@@ -161,14 +125,14 @@
       <section class="project" id="projects">
         <div class="projectContainer container1" aria-live="polite">
           <div class="projectContainerOverlay">
-            <button class="closeInfoButton"><i>&#x2716;</i></button>
+            <button class="closeInfoButton" tabindex="-1"><i>&#x2716;</i></button>
             <div class="projectTextContainer">
               <p>
                 The NFL Records Quiz app was developed as an exercise in producing a single page web app with
                 dynamically generated html for all event transitions.
               </p>
               <p>
-                The app follows the model-view-controller design paradigm. It utilize a store to track the
+                The app follows the model-view-controller design paradigm. It utilizes a store to track the
                 users performance on the quiz as well as to display questions, whether a user correctly
                 answered a question, and final results for the quiz.
               </p>
@@ -193,7 +157,7 @@
           <nav class="projectNav">
             <ul class="projectButtons">
               <li class="projectButton">
-                <a href="https://github.com/thinkful-ei-heron/Dan_Kei_quizApp"
+                <a href="https://github.com/thinkful-ei-heron/Dan_Kei_quizApp" target="_blank"
                   ><i class="fab fa-github"></i
                 ></a>
               </li>
@@ -203,7 +167,7 @@
               </li>
 
               <li class="projectButton">
-                <a href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/"
+                <a href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/" target="_blank"
                   ><i class="fa fa-play play"></i
                 ></a>
               </li>
@@ -211,86 +175,9 @@
           </nav>
         </div>
       </section>
-
-      <div class="titleContainer skillsTitle">
-        <div class="sectionTitle"><p>SKILLS</p></div>
-        <p class="second">SKILLS</p>
-      </div>
-
-      <section class="skills">
-        <p class="date date1">2014</p>
-        <div class="timelineCover"></div>
-        <div class="timeline">
-          <div class="line line0"></div>
-          <div class="marker" id="marker1"></div>
-          <div class="line line1"></div>
-          <div class="marker" id="marker2"></div>
-          <div class="line line1"></div>
-          <div class="marker" id="marker3"></div>
-          <div class="line line1"></div>
-          <div class="marker" id="marker4"></div>
-        </div>
-        <div class="experience exp1 cover"></div>
-        <div class="experience exp1">
-          <img src="./images/MSU.svg" />
-          <p>
-            BS in Computer Science<br /><br />
-            Skills Learned:
-          </p>
-          <ul>
-            <li>Java</li>
-            <li>Object oriented programming and design</li>
-            <li>Data structures and algorithms</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-        <div class="experience exp2 cover"></div>
-        <div class="experience exp2">
-          <img src="./images/teradata.svg" />
-          <p>
-            Hardware Support Engineer<br /><br />
-            Skills Learned:
-          </p>
-          <ul>
-            <li>blah</li>
-            <li>blah</li>
-            <li>blah</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-        <div class="experience exp3 cover"></div>
-        <div class="experience exp3">
-          <img src="./images/teradata.svg" />
-          <p>
-            Database Support Engineer<br /><br />
-            Skills Learned:
-          </p>
-          <ul>
-            <li>blah</li>
-            <li>blah</li>
-            <li>blah</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-        <div class="experience exp4 cover"></div>
-        <div class="experience exp4">
-          <img src="./images/thinkful_small.png" />
-          <p>
-            Engineering Immersion<br /><br />
-            Skills Learned:
-          </p>
-          <ul>
-            <li>blah</li>
-            <li>blah</li>
-            <li>blah</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-      </section>
     </main>
     <script src="spray.js" type="text/javascript"></script>
     <script src="slide.js" type="text/javascript"></script>
     <script src="style.js" type="text/javascript"></script>
-    <script src="intersection.js" type="text/javascript"></script>
   </body>
 </html>
