@@ -579,6 +579,11 @@ header .l3 {
   color: #ff5da8;
 }
 
+.technologies li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .technologies li img {
   width: 50px;
   height: 50px;

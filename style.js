@@ -20,6 +20,7 @@ function bindListeners() {
   projectInfoEventListener();
   closeProjectInfoEventListener();
   contactNavEventListener();
+  navLinkMobileClickEventListener();
 }
 
 function buttonBorderOnTabListener() {
@@ -98,6 +99,19 @@ function closeProjectInfoEventListener() {
   closeInfoButton.onclick = () => {
     toggleInfo();
   };
+}
+
+function navLinkMobileClickEventListener() {
+  let burger = document.querySelector('.burger');
+  let closeNav = document.querySelector('.closeBurger');
+  let navLinks = document.querySelectorAll('.navLink');
+  let nav = document.querySelector('.nav');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (nav.classList.contains('toggleNav')) toggleNav(burger, closeNav);
+    });
+  });
 }
 
 function toggleInfo() {
