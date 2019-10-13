@@ -123,9 +123,11 @@ function toggleInfo() {
   if (cursor === 'auto') {
     closeInfoButton.style.cursor = 'pointer';
     closeInfoButton.tabIndex = 0;
+    projectContainerOverlay.style.zIndex = 10;
   } else {
     closeInfoButton.style.cursor = 'auto';
     closeInfoButton.tabIndex = -1;
+    projectContainerOverlay.style.zIndex = 0;
   }
 
   projectContainerOverlay.classList.toggle('toggleInfo');

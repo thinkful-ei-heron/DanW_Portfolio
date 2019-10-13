@@ -423,10 +423,10 @@ header {
 
 .projectContainerOverlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: -1px;
+  left: -1px;
+  height: 101%;
+  width: 101%;
   padding-top: 25px;
   color: white;
   opacity: 0;
@@ -438,7 +438,7 @@ header {
   }
 
   & p {
-    margin: 15px 10px;
+    margin: 25px 10px;
     font-size: 0.9rem;
     line-height: 1.2rem;
   }
@@ -515,10 +515,10 @@ header {
 }
 
 .projectNav {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   position: absolute;
   bottom: 0px;
-  left: 0px;
   border: 0;
 }
 
@@ -531,6 +531,11 @@ header {
   & a:visited {
     color: $color2;
   }
+
+  & button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
 }
 
 .projectButton {
@@ -540,11 +545,6 @@ header {
   line-height: 45px;
   font-size: 1.7rem;
   color: $color2;
-
-  & .play {
-    position: relative;
-    left: 2px;
-  }
 
   & button {
     background: none;
@@ -781,7 +781,7 @@ header {
   }
 
   .projectTextContainer {
-    margin-top: -10px;
+    margin-top: -30px;
     margin-left: 125px;
     width: 550px;
 
@@ -797,8 +797,8 @@ header {
     grid-template-rows: repeat(12, 1fr);
     //grid-template-areas: 'left' 'left' 'left';
     grid-gap: 10px;
-    height: 325px;
-    width: 800px;
+    height: 327px;
+    width: 850px;
   }
 
   .projectTitle {
@@ -831,7 +831,7 @@ header {
 
   .screenShot {
     grid-row: 3/13;
-    grid-column: 3/13;
+    grid-column: 4/14;
     align-self: center;
     justify-self: center;
     height: auto;
@@ -840,21 +840,55 @@ header {
   }
 
   .projectNav {
+    display: grid;
+    place-items: center center;
     height: 100%;
-    width: 50px;
+    width: 63px;
   }
 
   .projectButtons {
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     height: 100%;
+    width: 100%;
+
+    & a {
+      height: 107px;
+      width: 98%;
+      text-decoration: none;
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
+
+    & button {
+      height: 107px;
+      width: 98%;
+      padding: 0;
+      margin-top: 1px;
+      margin-bottom: 1px;
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+    }
   }
 
   .projectButton {
-    font-size: 2.2rem;
+    display: grid;
+    place-items: center center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 0 15px 15px 0;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+
+    &:hover {
+      background-color: black;
+    }
 
     & i {
+      align-self: center;
       font-size: 2.2rem;
+      color: $color2;
     }
   }
 

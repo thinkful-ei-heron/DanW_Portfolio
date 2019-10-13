@@ -505,10 +505,10 @@ header .l3 {
 
 .projectContainerOverlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: -1px;
+  left: -1px;
+  height: 101%;
+  width: 101%;
   padding-top: 25px;
   color: white;
   opacity: 0;
@@ -522,7 +522,7 @@ header .l3 {
 }
 
 .projectContainerOverlay p {
-  margin: 15px 10px;
+  margin: 25px 10px;
   font-size: 0.9rem;
   line-height: 1.2rem;
 }
@@ -601,10 +601,10 @@ header .l3 {
 }
 
 .projectNav {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   position: absolute;
   bottom: 0px;
-  left: 0px;
   border: 0;
 }
 
@@ -623,6 +623,11 @@ header .l3 {
   color: #ff5da8;
 }
 
+.projectButtons button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
 .projectButton {
   height: 45px;
   width: 45px;
@@ -630,11 +635,6 @@ header .l3 {
   line-height: 45px;
   font-size: 1.7rem;
   color: #ff5da8;
-}
-
-.projectButton .play {
-  position: relative;
-  left: 2px;
 }
 
 .projectButton button {
@@ -865,7 +865,7 @@ header .l3 {
     width: 100vw;
   }
   .projectTextContainer {
-    margin-top: -10px;
+    margin-top: -30px;
     margin-left: 125px;
     width: 550px;
   }
@@ -881,8 +881,8 @@ header .l3 {
     -ms-grid-rows: (1fr)[12];
         grid-template-rows: repeat(12, 1fr);
     grid-gap: 10px;
-    height: 325px;
-    width: 800px;
+    height: 327px;
+    width: 850px;
   }
   .projectTitle {
     -ms-grid-column: 16;
@@ -934,9 +934,9 @@ header .l3 {
     -ms-grid-row: 3;
     -ms-grid-row-span: 10;
     grid-row: 3/13;
-    -ms-grid-column: 3;
+    -ms-grid-column: 4;
     -ms-grid-column-span: 10;
-    grid-column: 3/13;
+    grid-column: 4/14;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -947,8 +947,11 @@ header .l3 {
     margin-top: 20px;
   }
   .projectNav {
+    display: -ms-grid;
+    display: grid;
+    place-items: center center;
     height: 100%;
-    width: 50px;
+    width: 63px;
   }
   .projectButtons {
     -webkit-box-orient: vertical;
@@ -958,13 +961,48 @@ header .l3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
+    width: 100%;
+  }
+  .projectButtons a {
+    height: 107px;
+    width: 98%;
+    text-decoration: none;
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+  .projectButtons button {
+    height: 107px;
+    width: 98%;
+    padding: 0;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
   }
   .projectButton {
-    font-size: 2.2rem;
+    display: -ms-grid;
+    display: grid;
+    place-items: center center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 0 15px 15px 0;
+    -webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+  }
+  .projectButton:hover {
+    background-color: black;
   }
   .projectButton i {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     font-size: 2.2rem;
+    color: #ff5da8;
   }
   .quote {
     width: auto;
